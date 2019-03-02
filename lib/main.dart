@@ -6,6 +6,7 @@ const _ownerName = 'Ed (Commish)';
 const _ownerRecord = '100-75';
 const _ownerPlayoffRecord = '8-3';
 const _ownerSuperbowlRecord = '2-0';
+const _isActive = true;
 const _ownerIcon = Icons.star;
 const _ownerListColor = Colors.deepPurple;
 
@@ -26,6 +27,7 @@ class TSizzlesCookoutApp extends StatelessWidget {
             record: _ownerRecord,
             playoffRecord: _ownerPlayoffRecord,
             superbowlRecord: _ownerSuperbowlRecord,
+            isActive: _isActive,
             iconLocation: _ownerIcon,
             color: _ownerListColor,
           ),

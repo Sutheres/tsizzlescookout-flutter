@@ -5,6 +5,7 @@ class OwnerListItem extends StatelessWidget {
   final String record;
   final String playoffRecord;
   final String superbowlRecord;
+  final bool isActive;
   final ColorSwatch color;
   final IconData iconLocation;
 
@@ -14,12 +15,14 @@ class OwnerListItem extends StatelessWidget {
       @required this.record,
         @required this.playoffRecord,
         @required this.superbowlRecord,
+        @required this.isActive,
       @required this.color,
       @required this.iconLocation})
       : assert(name != null),
         assert(record != null),
         assert(playoffRecord != null),
         assert(superbowlRecord != null),
+        assert(isActive != null),
         assert(color != null),
         assert(iconLocation != null);
 
@@ -28,7 +31,7 @@ class OwnerListItem extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       child: Container(
-        height: 110.0,
+        height: 105.0,
         padding: EdgeInsets.all(8.0),
         child: InkWell(
           borderRadius: BorderRadius.circular(15.0),
@@ -47,15 +50,17 @@ class OwnerListItem extends StatelessWidget {
                   size: 60.0,
                 ),
               ),
+              Center(
+                child: Text(
+                  name,
+                  textAlign: TextAlign.center,
+                  style: TextStyle(fontSize: 24.0),
+                ),
+              ),
               Padding(
                 padding: EdgeInsets.all(8.0),
                 child: Column(
                   children: <Widget>[
-                    Text(
-                      name,
-                      textAlign: TextAlign.center,
-                      style: TextStyle(fontSize: 20.0),
-                    ),
                     Text(
                       'Record: $record',
                       textAlign: TextAlign.center,
@@ -68,6 +73,11 @@ class OwnerListItem extends StatelessWidget {
                     ),
                     Text(
                       'Superbowl Record: $superbowlRecord',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(fontSize: 15.0),
+                    ),
+                    Text(
+                      'Active: $isActive',
                       textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 15.0),
                     ),
