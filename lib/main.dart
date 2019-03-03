@@ -1,14 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:t_sizzles_cookout/OwnerListItem.dart';
-
-
-const _ownerName = 'Ed (Commish)';
-const _ownerRecord = '100-75';
-const _ownerPlayoffRecord = '8-3';
-const _ownerSuperbowlRecord = '2-0';
-const _isActive = true;
-const _ownerIcon = Icons.star;
-const _ownerListColor = Colors.deepPurple;
+import 'package:t_sizzles_cookout/OwnersScreen.dart';
 
 
 void main() { runApp(TSizzlesCookoutApp()); }
@@ -21,17 +12,7 @@ class TSizzlesCookoutApp extends StatelessWidget {
       title: 'T-Sizzle\'s Cookout',
       home: Scaffold(
         backgroundColor: Colors.white,
-        body: Center(
-          child: OwnerListItem(
-            name: _ownerName,
-            record: _ownerRecord,
-            playoffRecord: _ownerPlayoffRecord,
-            superbowlRecord: _ownerSuperbowlRecord,
-            isActive: _isActive,
-            iconLocation: _ownerIcon,
-            color: _ownerListColor,
-          ),
-        ),
+        body: OwnersScreen(),
       ),
     );
   }

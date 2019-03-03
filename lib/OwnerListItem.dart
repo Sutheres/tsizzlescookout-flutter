@@ -13,9 +13,9 @@ class OwnerListItem extends StatelessWidget {
       {Key key,
       @required this.name,
       @required this.record,
-        @required this.playoffRecord,
-        @required this.superbowlRecord,
-        @required this.isActive,
+      @required this.playoffRecord,
+      @required this.superbowlRecord,
+      @required this.isActive,
       @required this.color,
       @required this.iconLocation})
       : assert(name != null),
@@ -50,35 +50,34 @@ class OwnerListItem extends StatelessWidget {
                   size: 60.0,
                 ),
               ),
-              Center(
-                child: Text(
-                  name,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(fontSize: 24.0),
+              Expanded(
+                child: Center(
+                  child: Text(
+                    name,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(fontSize: 24.0),
+                  ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsets.all(8.0),
+              Expanded(
+                //padding: EdgeInsets.only(left: 50, top: 8.0, right: 8.0, bottom: 8.0),
                 child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Text(
                       'Record: $record',
-                      textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 15.0),
                     ),
                     Text(
                       'Playoff Record: $playoffRecord',
-                      textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 15.0),
                     ),
                     Text(
                       'Superbowl Record: $superbowlRecord',
-                      textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 15.0),
                     ),
                     Text(
                       'Active: $isActive',
-                      textAlign: TextAlign.center,
                       style: TextStyle(fontSize: 15.0),
                     ),
                   ],
