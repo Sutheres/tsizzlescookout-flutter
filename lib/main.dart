@@ -10,6 +10,9 @@ class TSizzlesCookoutApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'T-Sizzle\'s Cookout',
+      theme: new ThemeData(
+        primaryColor: Colors.white,
+      ),
       home: Scaffold(
         backgroundColor: Colors.white,
         body: OwnersScreen(),
