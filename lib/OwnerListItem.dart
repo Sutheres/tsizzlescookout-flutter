@@ -31,7 +31,7 @@ class OwnerListItem extends StatelessWidget {
     return Material(
       color: Colors.transparent,
       child: Container(
-        height: 105.0,
+        height: 92.0,
         padding: EdgeInsets.all(8.0),
         child: InkWell(
           borderRadius: BorderRadius.circular(15.0),
@@ -47,7 +47,7 @@ class OwnerListItem extends StatelessWidget {
                 padding: EdgeInsets.all(8.0),
                 child: Icon(
                   iconLocation,
-                  size: 60.0,
+                  size: 40.0,
                 ),
               ),
               Expanded(
@@ -60,27 +60,29 @@ class OwnerListItem extends StatelessWidget {
                 ),
               ),
               Expanded(
-                //padding: EdgeInsets.only(left: 50, top: 8.0, right: 8.0, bottom: 8.0),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Text(
-                      'Record: $record',
-                      style: TextStyle(fontSize: 15.0),
-                    ),
-                    Text(
-                      'Playoff Record: $playoffRecord',
-                      style: TextStyle(fontSize: 15.0),
-                    ),
-                    Text(
-                      'Superbowl Record: $superbowlRecord',
-                      style: TextStyle(fontSize: 15.0),
-                    ),
-                    Text(
-                      'Active: $isActive',
-                      style: TextStyle(fontSize: 15.0),
-                    ),
-                  ],
+                child: Padding(
+                  padding: EdgeInsets.all(8.0),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: <Widget>[
+                      Text(
+                        'Record: $record',
+                        style: TextStyle(fontSize: 12.0),
+                      ),
+                      Text(
+                        'Playoff Record: $playoffRecord',
+                        style: TextStyle(fontSize: 12.0),
+                      ),
+                      Text(
+                        'Superbowl Record: $superbowlRecord',
+                        style: TextStyle(fontSize: 12.0),
+                      ),
+                      Text(
+                        'Active: $isActive',
+                        style: TextStyle(fontSize: 12.0),
+                      ),
+                    ],
+                  ),
                 ),
               )
             ],
